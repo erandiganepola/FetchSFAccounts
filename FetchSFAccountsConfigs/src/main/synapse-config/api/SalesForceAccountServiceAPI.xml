@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/salesforceaccountapi" name="SalesForceAccountServiceAPI" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET">
+        <inSequence>
+            <salesforcerest.init>
+                <accessToken>00D8d00000AXrw7!AQ8AQPEvtbnSH6Q4Vn9eLmrqvVIHWiA2FbODlVWTrOa0kfLDt3ge.P96zuUZ0dahljgvbb2.bHabKtR9NwGVuHnL.SRqvdmn</accessToken>
+                <apiVersion>v44.0</apiVersion>
+                <hostName>https://login.salesforce.com</hostName>
+                <refreshToken>5Aep861g78ZB7.52BeEa6EBMXm_esEchStGJzYFyFsq5pfdfAaiDJENlHp3s9R3DP8lno2QYOqAjITdUhvc0ZE0</refreshToken>
+                <clientSecret>7148D050751EC1297AC6B55DDE005C6A978F94B234174B302D9F82CB5882AA24</clientSecret>
+                <clientId>3MVG9DREgiBqN9Wk3fpf6LdQBkXHPZ_DXhdJvSWKcRzmSvzLh5TZ4ed7kVYaEa7CKi9k9Al5vATKZHWbD5CgJ</clientId>
+                <apiUrl>https://ap17.salesforce.com</apiUrl>
+                <registryPath>connectors/SalesforceRest</registryPath>
+            </salesforcerest.init>
+            <salesforcerest.query>
+                <queryString>select id from Account</queryString>
+            </salesforcerest.query>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>
